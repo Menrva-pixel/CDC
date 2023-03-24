@@ -1,0 +1,69 @@
+{
+    "countries": [
+      {
+        "name": "United States",
+        "capital": "Washington, D.C.",
+        "population": 328239523,
+        "language": "English",
+        "currency": "USD"
+      },
+      {
+        "name": "United Kingdom",
+        "capital": "London",
+        "population": 66460344,
+        "language": "English",
+        "currency": "GBP"
+      },
+      {
+        "name": "Japan",
+        "capital": "Tokyo",
+        "population": 126150000,
+        "language": "Japanese",
+        "currency": "JPY"
+      },
+      {
+        "name": "Germany",
+        "capital": "Berlin",
+        "population": 83019200,
+        "language": "German",
+        "currency": "EUR"
+      },
+      {
+        "name": "China",
+        "capital": "Beijing",
+        "population": 1397715000,
+        "language": "Mandarin",
+        "currency": "CNY"
+      }
+    ],
+  
+  
+    "negara": [
+      {
+        "nama": "Amerika Serikat",
+        "peringkat": 1,
+        "kekuatan_militer": "Sangat Kuat"
+      },
+      {
+        "nama": "Rusia",
+        "peringkat": 2,
+        "kekuatan_militer": "Sangat Kuat"
+      },
+      {
+        "nama": "Cina",
+        "peringkat": 3,
+        "kekuatan_militer": "Sangat Kuat"
+      },
+      {
+        "nama": "India",
+        "peringkat": 4,
+        "kekuatan_militer": "Kuat"
+      },
+      {
+        "nama": "Prancis",
+        "peringkat": 5,
+        "kekuatan_militer": "Kuat"
+      }
+    ]
+  }
+  
