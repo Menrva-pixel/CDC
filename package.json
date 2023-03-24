@@ -1,5 +1,5 @@
 {
-  "name": "country-data-intel",
+  "name": "country-data-center",
   "version": "1.0.0",
   "description": "Tugas Submission Dicoding",
   "main": "app.js",
@@ -26,5 +26,14 @@
   "dependencies": {
     "loader": "^2.1.1",
     "regenerator-runtime": "^0.13.9"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Menrva-pixel/CDC.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Menrva-pixel/CDC/issues"
+  },
+  "homepage": "https://github.com/Menrva-pixel/CDC#readme",
+  "keywords": []
 }
