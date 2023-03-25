@@ -76,6 +76,7 @@ class ContactSection extends HTMLElement {
 
           .social-media-links {
             padding-left: 0px;
+            
           }
           
           .social-media-links a,

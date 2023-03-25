@@ -4,6 +4,7 @@ import '../component/top-countries.js';
 import '../component/mil-power.js';
 import '../component/contact-section.js';
 import '../component/footer-info.js';
+import '../data/news-element.js';
 
 import DataSource from '../data/rest-country-api.js';
 
@@ -32,3 +33,5 @@ const main = () => {
 };
 
 export default main;
+
+
