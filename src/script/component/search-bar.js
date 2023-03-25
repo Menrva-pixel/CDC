@@ -38,18 +38,19 @@ class SearchBar extends HTMLElement {
         .search-container > input {
           width: 300px;
           padding: 12px;
-          border: none;
+          border: 2px solid #03a1fc;
           border-radius: 25px;
           font-size: 16px;
-          color: #444444;
-          background-color: #f3f3f3;
+          color: #03a1fc;
+          background-color: transparent;
           box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-          transition: box-shadow 0.3s ease-in-out;
+          transition: box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out;
         }
         
         .search-container > input:focus {
           outline: none;
           box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+          background-color: #1e2021;
         }
         
         .search-container > input::placeholder {

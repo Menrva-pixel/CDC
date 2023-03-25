@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
+palete {
+  color: #03a1fc, ;
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -13,7 +17,7 @@ html {
 
 body {
     font-family: 'Roboto', sans-serif;
-    background: rgb(2,68,254);
+    background: #03a1fc;
     background: radial-gradient(circle, rgba(2,68,254,1) 0%, rgba(38,60,201,1) 0%, rgba(11,11,11,1) 60%);
     background-size: contain;
     
@@ -59,7 +63,7 @@ h3{
     position: relative;
     height: 70px;
     overflow: hidden;
-    color: aqua;
+    color: #03a1fc;
     background-color: rgba(0, 0, 0, 0);
     margin: auto;
 }
@@ -87,7 +91,7 @@ h3{
     position: relative;
     height: 70px;
     overflow: hidden;
-    color: aqua;
+    color: #03a1fc;
     background-color: black;
     margin: auto;
 }
@@ -121,12 +125,13 @@ h3{
 
 
 @media only screen and (max-width: 768px) {
-        country-list {
-        display: block;
-        margin-top: 24px;
-        width: 100%;
-        padding: 5px;
-        border-radius: 0px;
+
+    country-list {
+      display: block;
+      margin-top: 24px;
+      width: 100%;
+      padding: 5px;
+      border-radius: 0px;
     }   
 
     .group {
@@ -138,33 +143,36 @@ h3{
         font-size: 2em;
     }
 
-    @keyframes my-animation {
+    @keyframes kiri {
         0% { left: 100%; }
         100% { left: -500%; }
     }
 
+    @keyframes kanan {
+      0% { left: 100%; }
+      100% { left: -200%; }
+  }
+
     .banner {
-        height: 590px;
-        max-width: 728px;
+        height: 520px;
+        max-height: 100%;
+        max-width: auto;
         width: 100%;
         margin: 0 auto;
     }
 
-
-
-
 } 
 
 footer {
-    background-color: #333;
+    background-color: #1b1b1b00;
     color: #fff;
     padding: 20px;
-    text-align: center;
   }
   
   .footer {
     font-size: 16px;
     letter-spacing: 1px;
+    text-align: center;
   }
 
   .footer a {
@@ -177,6 +185,15 @@ footer {
     color: #f1c40f;
   }
 
+  @media (max-width: 768px) {
+    footer {
+    text-align: center;
+    }
+
+    .footer {
+      font-size: 12px;
+    }
+  }
 
   #countries {
     margin: 0 auto;

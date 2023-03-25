@@ -22,13 +22,12 @@ class NavBar extends HTMLElement {
           width: 100%;
           background-color: none;
           color: #c7c7c7;
-          font-family: sans-serif;
+          font-family: 'Roboto', sans-serif;
           border-radius: 0px;
           display: flex;
           justify-content: space-between;
           align-items: center;
           text-decoration: none;
-          transition: background-color 0.5s ease;
         }
 
         :host.scrolled {
@@ -36,8 +35,9 @@ class NavBar extends HTMLElement {
         }
   
         h2 {
+          font-family: 'Orbitron', sans-serif;
           padding: 16px;
-          font-size: 24px;
+          font-size: 28px;
           font-weight: bold;
           text-align: center;
           text-transform: uppercase;
@@ -47,6 +47,7 @@ class NavBar extends HTMLElement {
           display: flex;
           align-items: center;
           margin-right: 16px;
+          font-weight: 600;
         }
   
         .menu a {
@@ -59,11 +60,12 @@ class NavBar extends HTMLElement {
         .menu a:hover {
           text-decoration: none;
           transform: scale(1.1);
+          color: #03a1fc;
         }
       </style>
       
       <div class="logo">
-        <h2>CDC</h2>
+        <h2>C.D.C.</h2>
       </div>
   
       <div class="menu">

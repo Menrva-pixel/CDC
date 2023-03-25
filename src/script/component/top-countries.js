@@ -8,21 +8,17 @@ class TopCountry extends HTMLElement {
       this.shadowRoot.innerHTML = `
         <style>
 
-        h3{
-          text-align: center;
-          padding: 30px;
-          font-family: 'Orbitron', sans-serif;
-        }
-
         .top-3-countries {
           background-color: transparent;
           margin: 20px;
         }
       
         .top-3-countries h3 {
+          font-family: 'Orbitron', sans-serif;
           margin-bottom: 10px;
-          font-size: 24px;
-          color: #acaeb0;
+          font-size: 28px;
+          color: #fff;
+          text-align: center;
         }
       
         .top-3-countries ul {
@@ -125,7 +121,7 @@ class TopCountry extends HTMLElement {
         
         .country-card p.military-power {
           font-weight: bold;
-          text-align: center;
+          font-size: 12px;
         }
         
         .country-card p.military-power a {

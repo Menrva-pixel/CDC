@@ -2,6 +2,8 @@ import '../component/search-result.js';
 import '../component/search-bar.js';
 import '../component/top-countries.js';
 import '../component/mil-power.js';
+import '../component/contact-section.js';
+import '../component/footer-info.js';
 
 import DataSource from '../data/rest-country-api.js';
 
