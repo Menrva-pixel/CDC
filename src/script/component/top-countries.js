@@ -7,6 +7,11 @@ class TopCountry extends HTMLElement {
 
       this.shadowRoot.innerHTML = `
         <style>
+        hr {
+          border: 0;
+          height: 1px;
+          background-image: linear-gradient(to right, rgba(0, 0, 0, 0), #c7c7c7, rgba(0, 0, 0, 0));
+        }
 
         .top-3-countries {
           background-color: transparent;
@@ -32,17 +37,15 @@ class TopCountry extends HTMLElement {
         }
       
         .top-3-countries li {
-          display: flex;
-          flex-direction: column;
           align-items: center;
           text-align: center;
           margin-bottom: 20px;
-          width: 33.33%;
+          width: auto;
         }
       
         .top-3-countries img {
-          width: 50px;
-          height: 35px;
+          width: 150px;
+          height: auto;
           object-fit: cover;
           margin-bottom: 10px;
         }
@@ -60,6 +63,7 @@ class TopCountry extends HTMLElement {
           color: #acaeb0;
         }
       
+
         .top-3-countries .rank {
           font-size: 14px;
           font-weight: 600;
@@ -76,12 +80,14 @@ class TopCountry extends HTMLElement {
 
         .country-card {
           border-radius: 10px;
-          width: 190px;
-          height: 254px;
-          background: rgb(38, 38, 38);
-          box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
-          border: 1px solid #ccc;
-          border-radius: 5px;
+          width: 250px;
+          height: 274px;
+          background: rgba(1, 1, 1, 0.66);
+          border-radius: 16px;
+          box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+          backdrop-filter: blur(4.9px);
+          -webkit-backdrop-filter: blur(4.9px);
+          border: 1px solid rgba(1, 1, 1, 0.68);
           margin: 30px;
           padding: 30px;
           display: flex;
@@ -145,8 +151,8 @@ class TopCountry extends HTMLElement {
         <div class="country-card">
           <li>
             <img src="https://www.worldometers.info/img/flags/ch-flag.gif" alt="China Flag">
-            <h4>China</h4>
-            <p>Population: <a>1,387,171,146</a></p>
+            <h3>China</h3>
+            <h4>Population: <a>1,387,171,146</a></h4>
             <p class="rank">Rank: 1</p>
             <p class="military-power">Military Power: <a style="color:yellow;">High<a/></p>
           </li>
@@ -154,8 +160,8 @@ class TopCountry extends HTMLElement {
         <div class="country-card">
           <li>
             <img src="https://www.worldometers.info/img/flags/in-flag.gif" alt="India Flag">
-            <h4>India</h4>
-            <p>Population: <a>1,366,417,754</a></p>
+            <h3>India</h3>
+            <h4>Population: <a>1,366,417,754</a></h4>
             <p class="rank">Rank: 2</p>
             <p class="military-power">Military Power: <a style="color:yellow;">High</a></p>
           </li>
@@ -163,8 +169,8 @@ class TopCountry extends HTMLElement {
         <div class="country-card">
           <li>
             <img src="https://www.worldometers.info/img/flags/us-flag.gif" alt="United States Flag">
-            <h4>U.S.A.</h4>
-            <p>Population: <a>332,915,073</a></p>
+            <h3>U.S.A.</h3s>
+            <h4>Population: <a>332,915,073</a></h4>
             <p class="rank">Rank: 3</p>
             <p class="military-power">Military Power: <a style="color:red;">Very High</a></p>
           </li>

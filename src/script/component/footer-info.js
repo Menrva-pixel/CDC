@@ -12,6 +12,12 @@ class FooterInfo extends HTMLElement {
             background: #03a1fc00;
             padding: 1rem;
           }
+
+          hr {
+            border: 0;
+            height: 1px;
+            background-image: linear-gradient(to right, rgba(0, 0, 0, 0), #c7c7c7, rgba(0, 0, 0, 0));
+          }
           
           .social-media {
             display: flex;
@@ -101,15 +107,11 @@ class FooterInfo extends HTMLElement {
             .sponsors img {
                  height: 40px;
              }
+             
             }
           
         </style>
         <footer>
-          <div class="social-media">
-            <a href="#"><i class="fab fa-facebook"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-          </div>
             <hr>
             <h3>Partners</h3>
             <div class="sponsors">
@@ -126,6 +128,7 @@ class FooterInfo extends HTMLElement {
                     <p class="sponsor-name">SoliCode</p>
                 </div>
             </div>
+            <hr>
         </footer>
       `;
     }

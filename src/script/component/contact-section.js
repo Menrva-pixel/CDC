@@ -17,7 +17,12 @@ class ContactSection extends HTMLElement {
             max-width: 100%;
             gap: 90px;
             padding: 40px;   
-            background-color: #f2f2f200;
+            background: rgba(1, 1, 1, 0.66);
+            border-radius: 16px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(4.9px);
+            -webkit-backdrop-filter: blur(4.9px);
+            border: 1px solid rgba(1, 1, 1, 0.68);
           }
           
           /* Footer styles */
@@ -28,6 +33,12 @@ class ContactSection extends HTMLElement {
             justify-content: space-between;
             padding: 40px 0;
             background-color: #f5f5f5;
+          }
+
+          hr {
+            border: 0;
+            height: 1px;
+            background-image: linear-gradient(to right, rgba(0, 0, 0, 0), #c7c7c7, rgba(0, 0, 0, 0));
           }
           
           .social-media-links,
@@ -59,7 +70,7 @@ class ContactSection extends HTMLElement {
           .social-media-links li,
           .support-links li,
           .about-links li {
-            margin-bottom: 5px;
+            margin-bottom: 20px;
             list-style-type: none;
           }
 
@@ -70,24 +81,29 @@ class ContactSection extends HTMLElement {
           .social-media-links a,
           .support-links a,
           .about-links a {
-            color: #333;
+            position: relative;
+            color: #646464;
             text-decoration: none;
             font-size: 14px;
+            margin: 5px auto
+            margin-bottom: 10px;
           }
 
           .social-media-links li img {
-            width: 35px;
-            height: 35px;
-            filter: brightness(0) saturate(100%) invert(100%) sepia(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
+            filter: brightness(0) saturate(100%) invert(100%) sepia(0%) hue-rotate(0deg) brightness(100%) contrast(100%);\
+            width: 30px;
+            height: 30px;
           }
           
           .social-media-links li a {
             font-size: 14px;
-            color: #333;
+            color: #646464;
             text-decoration: none;
           }
           
-          .social-media-links li a:hover {
+          .social-media-links li a:hover,
+          .support-links a:hover,
+          .about-links a:hover {
             color: #007bff;
           }
           
@@ -109,20 +125,35 @@ class ContactSection extends HTMLElement {
             border: none;
             border-bottom: 2px solid #ccc;
             background: transparent;
+            color: #03a1fc;
+          }
+
+          .email-form-container input[type="email"]:focus {
+            outline: none;
           }
           
           
           .email-form-container button[type="submit"] {
             position: relative;
-            padding: 10px 40px 10px 10px; 
-            font-size: 14px;
-            background-color: #333;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
+            background-image: linear-gradient(to right, #314755 0%, #26a0da  51%, #314755  100%);
+            margin: 10px;
+            padding: 15px 45px;
+            text-align: center;
+            text-transform: uppercase;
+            transition: 0.5s;
+            background-size: 200% auto;
+            color: white;            
+            box-shadow: 0 0 5px #eee;
+            border-radius: 10px;
+            display: block;
           }
-          
+
+          .email-form-container button[type="submit"]:hover {
+            background-position: right center; 
+            color: #fff;
+            text-decoration: none;
+          }
+                 
           .email-form-container button[type="submit"] svg {
             position: absolute;
             width: 25px;
@@ -180,23 +211,26 @@ class ContactSection extends HTMLElement {
           }
           
         </style>
-        <hr>
         <div id="contact" class="contact-container">
             <div class="social-media-container">
                 <h2>C.D.C.</h2>
                 <ul class="social-media-links">
                   <li>
                     <img src="https://img.icons8.com/dotty/80/null/facebook-new.png"/>
-                    <a href="https://www.facebook.com">Barkah Herdyanto S</a>
+                    <a href="https://www.facebook.com">Facebook</a>
                   </li>
                   <li>
                     <img src="https://img.icons8.com/dotty/80/null/instagram-new.png"/> 
-                    <a href="https://www.facebook.com">Herdyanto26</a>
+                    <a href="https://www.facebook.com">Instagram</a>
                   </li>
                   <li>
                     <img src="https://img.icons8.com/dotty/80/null/linkedin.png"/>
-                    <a href="https://www.facebook.com">Facebook</a>
+                    <a href="https://www.facebook.com">LinkedIn</a>
                   </li>
+                  <li>
+                  <img src="https://img.icons8.com/wired/64/null/github.png"/>
+                  <a href="https://www.facebook.com">GitHub</a>
+                </li>
                 </ul>              
                 </div>
             <div class="support-container">
