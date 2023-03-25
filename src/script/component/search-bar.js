@@ -77,6 +77,7 @@ class SearchBar extends HTMLElement {
           }
         
         .search-title {
+          font-family: 'Orbitron', sans-serif;
           display: flex;
           flex-direction: column;
           font-size: 48px;
@@ -99,6 +100,14 @@ class SearchBar extends HTMLElement {
         @media screen and (max-width: 768px){
           .search-container {
             flex-direction: column;
+          }
+
+          .search-title {
+            font-size: 32px;
+          }
+
+          .small {
+            font-size: 16px;
           }
   
           .search-container > button {

@@ -1,18 +1,18 @@
 class SearchItem extends HTMLElement {
-    constructor() {
-        super();
-        this.shadowDOM = this.attachShadow({
-            mode: 'open'
-        });
-    }
+  constructor() {
+    super();
+    this.shadowDOM = this.attachShadow({
+      mode: 'open'
+    });
+  }
 
-    set country(country) {
-        this._country = country;
-        this.render();
-    }
+  set country(country) {
+    this._country = country;
+    this.render();
+  }
 
-    render() {
-        this.shadowDOM.innerHTML = `
+  render() {
+    this.shadowDOM.innerHTML = `
       <style>
       * {
       margin: 0;
@@ -39,11 +39,9 @@ class SearchItem extends HTMLElement {
         flex-direction: row;
         justify-content: center;
         align-items: start;
-        background-color: #040812;
         padding: 20px;
         border-radius: 5px;
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-        font-family: Arial, sans-serif;
+        font-family: Roboto, sans-serif;
         margin: 20px;
       }
       
@@ -54,7 +52,7 @@ class SearchItem extends HTMLElement {
       }
       
       .country-flag {
-        width: 150px;
+        width: auto;
         height: auto;
         margin-right: 20px;
       }
@@ -113,6 +111,7 @@ class SearchItem extends HTMLElement {
         margin: 0;
         line-height: 1.5;
         color: #c7c7c7;
+        font-weight: 600;
       }
 
       @media screen and (max-width: 768px) {
@@ -161,13 +160,14 @@ class SearchItem extends HTMLElement {
         }
 
       </style>
-      <h3>${this._country.name.common}</h3>
-    <div id="search-results">
-        <div class="country-container">
-        <div class="country-symbol">
-            <img class="country-flag" src="${this._country.flags.png}" alt="Country Flag">
-            <img class="country-coat" src="${this._country.coatOfArms.svg}" alt="Country Coat">
-        </div>
+      <hr>
+        <h3>${this._country.name.common}</h3>
+        <div id="search-results">
+          <div class="country-container">
+          <div class="country-symbol">
+              <img class="country-flag" src="${this._country.flags.png}" alt="Country Flag">
+              <img class="country-coat" src="${this._country.coatOfArms.svg}" alt="Country Coat">
+          </div>
         <div class="country-info">
             <h2>${this._country.name.official}
             <hr>
@@ -230,10 +230,10 @@ class SearchItem extends HTMLElement {
                     <p class="result">${this._country.timezones}</p>
                 </div>
             </div>
-        </div>
-    </div>
+          </div>
+      </div>
     `;
-    }
+  }
 }
 
 

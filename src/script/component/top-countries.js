@@ -139,6 +139,7 @@ class TopCountry extends HTMLElement {
               
         </style>
         <div class="top-3-countries">
+        <hr>
         <h3>Top 3 Countries</h3>
         <ul>
         <div class="country-card">
