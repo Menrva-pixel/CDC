@@ -13,6 +13,9 @@ class NewsElement extends HTMLElement {
         .news-section {
             display: flex;
             flex-direction: column;
+            align-item: center;
+            content-align: center;
+            height: 100%;
             padding: 50px;
             margin: 0 20px;
             font-family: 'Roboto', sans-serif;
@@ -26,9 +29,18 @@ class NewsElement extends HTMLElement {
 
           .news-section2 {
             width: 400px;
+            height: auto;  
+          }
+
+          hr {
+            border: 0;
+            height: 1px;
+            background-image: linear-gradient(to right, rgba(0, 0, 0, 0), #c7c7c7, rgba(0, 0, 0, 0));
           }
 
           .news-section2 .news-item {
+            display: flex;
+            flex-direction: column;
             margin: 10px;
             background: rgba(1, 1, 1, 0.66);
             border-radius: 5px;
@@ -36,6 +48,7 @@ class NewsElement extends HTMLElement {
             backdrop-filter: blur(4.9px);
             -webkit-backdrop-filter: blur(4.9px);
             border: 1px solid rgba(1, 1, 1, 0.68);
+            max-height: 500px;
           }
 
           .news-section2 h3 {
@@ -47,7 +60,47 @@ class NewsElement extends HTMLElement {
             font-family: 'Orbitron', sans-serif;
             color: #ebe0e0;
             margin-bottom: 50px;
-        }
+         }
+
+         @media screen and (max-width: 768px) {
+          .news-section {
+              margin: 0 10px;
+              padding: 20px;
+              border-radius: 0;
+              height: auto;
+          }
+
+          .news-item {
+            align-items: center;
+            content-align: center;
+          }
+
+          .news-content h3 {
+            float: right;
+            font-size: 12px !important;
+            overflow: hidden;
+            text-align: justify;
+          }
+
+          #berita-inter {
+            margin: 0;
+          }
+          
+          .news-image {
+            max-width: 100px;
+            max-height: 95px;
+          }
+          
+          .news-section2 {
+            display: none;
+          }
+
+          .description {
+            display: none;
+          }
+         }
+
+
           .news-item {
             display: flex;
             padding: 5px;
@@ -55,17 +108,30 @@ class NewsElement extends HTMLElement {
             
           }         
           .news-image {
-            max-width: 240px;
-            max-height: 240px;
+            max-width: 100px;
+            max-height: 95px;
             margin-right: 20px;
             overflow: hidden;
-            object-fit: contain;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            background-repeat: no-repeat;
+           background-position: 50% 50%;
           }
 
           .news-content h3 {
             text-align: start;
           }
-          
+
+          #berita-terkini > .news-item > .news-content h3{
+            font-size: 12px;
+          }
+
+          h2{
+            font-family: 'Orbitron', sans-serif;
+            text-align: center;
+            color: #ebe0e0;
+          }        
 
           h3{
             text-align: center;
@@ -79,7 +145,7 @@ class NewsElement extends HTMLElement {
             margin-top: 0;
             font-weight: 600;
             font-family: 'Roboto', sans-serif;
-            font-size: 18px !important;
+            font-size: 18px;
           }
           
           .published-date {
@@ -94,6 +160,7 @@ class NewsElement extends HTMLElement {
             padding: auto 50px ;
           }
         </style>
+        <hr>  
         <h3>International News</h3>
      <div id="berita-inter">   
         <div class="news-section">
@@ -118,7 +185,7 @@ class NewsElement extends HTMLElement {
 
       const currentNewsUrl = 'https://newsapi.org/v2/top-headlines?' +
         `category=science&` +
-        `pageSize=5&` +
+        `pageSize=4&` +
         `apiKey=${apiKey}`;
       
   
@@ -166,7 +233,6 @@ class NewsElement extends HTMLElement {
                 <div class="news-content">
                   <h3>${title}</h3>
                   <p class="published-date">${publishedAt}</p>
-                  <p class="description">${description}</p>
                 </div>
               `;
   

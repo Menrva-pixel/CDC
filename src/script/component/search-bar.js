@@ -65,7 +65,9 @@ class SearchBar extends HTMLElement {
           border: none;
           border-radius: 25px;
           background-color: transparent;
-          color: #4caf50;
+          font-family: 'Orbitron', sans-serif;
+          color: #ebe0e0;
+          font-weight: 600;
           font-size: 16px;
           text-transform: uppercase;
           cursor: pointer;
@@ -73,7 +75,7 @@ class SearchBar extends HTMLElement {
           }
           
           .search-container > button:hover {
-          color: #3e8e41;
+          color: #03a1fc;
           }
         
         .search-title {

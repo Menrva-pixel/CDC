@@ -15,7 +15,7 @@ class SearchResult extends HTMLElement {
     this.shadowRoot.innerHTML = '';
 
     if (!this._country || this._country.length === 0) {
-      this._renderError('No data available');
+      this._renderError('Data not found');
       return;
     }
 
@@ -39,7 +39,7 @@ class SearchResult extends HTMLElement {
           border-radius: 10px;
           box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
           background-color: #f8d7da;
-          color: #721c24;
+          color: #ebe0e0;
           font-size: 1.2rem;
           font-weight: 500;
           margin-bottom: 20px;

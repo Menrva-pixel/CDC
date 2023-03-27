@@ -23,11 +23,14 @@ class NavBar extends HTMLElement {
           background-color: none;
           color: #c7c7c7;
           font-family: 'Roboto', sans-serif;
+          font-weight: 500;
           border-radius: 0px;
           display: flex;
           justify-content: space-between;
           align-items: center;
           text-decoration: none;
+          position: sticky;
+          top: 0;
         }
 
         :host.scrolled {
@@ -69,8 +72,8 @@ class NavBar extends HTMLElement {
       </div>
   
       <div class="menu">
-        <a href="#result">About</a>
-        <a href="#">Contact</a>
+        <a href="#news">News</a>
+        <a href="#contact">Contact</a>
       </div>
     `;
   }

@@ -25,6 +25,14 @@ class TopCountry extends HTMLElement {
           color: #fff;
           text-align: center;
         }
+
+        h3 {
+          font-family: 'Orbitron', sans-serif;
+          margin-bottom: 10px;
+          font-size: 28px;
+          color: #fff;
+          text-align: center;
+        }
       
         .top-3-countries ul {
           display: flex;
@@ -177,6 +185,8 @@ class TopCountry extends HTMLElement {
           </div>
         </ul>
       </div>
+      <hr>
+      <h3>Search Result</h3>
       </main>
       `;
     }

@@ -14,7 +14,7 @@ class ContactSection extends HTMLElement {
             justify-content: center;
             align-items: flex-start;
             margin: 20px auto;
-            max-width: 100%;
+            max-width: 90%;
             gap: 90px;
             padding: 40px;   
             background: rgba(1, 1, 1, 0.66);
@@ -41,6 +41,10 @@ class ContactSection extends HTMLElement {
             background-image: linear-gradient(to right, rgba(0, 0, 0, 0), #c7c7c7, rgba(0, 0, 0, 0));
           }
           
+          p {
+           color: #c7c7c7;
+          }
+
           .social-media-links,
           .social-media-container,
           .support-container,
@@ -54,6 +58,7 @@ class ContactSection extends HTMLElement {
           .support-container h2,
           .about-container h2,
           .email-form-container h2 {
+            color: #ebe0e0;
             margin-bottom: 10px;
             font-family: 'Orbitron', sans-serif;
           }
@@ -117,12 +122,13 @@ class ContactSection extends HTMLElement {
           
           .email-form-container label {
             margin-right: 10px;
+            color: #c7c7c7;
           }
           
           .email-form-container input[type="email"] {
             flex-grow: 1;
             padding: 5px 10px;
-            font-size: 14px;
+            font-size: 24px;
             border: none;
             border-bottom: 2px solid #ccc;
             background: transparent;
@@ -170,7 +176,13 @@ class ContactSection extends HTMLElement {
 
           @media screen and (max-width: 768px) {
             .contact-container {
-              display: block;
+              flex-direction: column;
+              align-items: center;
+              gap: 5px;
+              margin: 10px auto;
+              padding: 20px;
+              border-radius: 0;
+              height: auto;
             }
           
             .social-media-container,
@@ -179,16 +191,31 @@ class ContactSection extends HTMLElement {
             .email-form-container {
               flex-basis: 100%;
               text-align: center;
-              margin-bottom: 40px;
+              margin-bottom: 15px;
             }
 
 
-            .social-media-links,
-            .support-links,
+            .social-media-links{
+              display: flex;
+              flex-direction: row;
+              gap: 10px;
+            }
+
+            .support-links {
+              display: flex;
+              flex-direction: row;
+              align-items: center;
+              gap: 10px;
+              margin-left: 0px;
+            }
+
             .about-links {
               display: flex;
-              flex-direction: column;
+              flex-direction: row;
               align-items: center;
+              gap: 10px;
+              margin-left: 0px;
+              justify-content: center;
             }
           
             .social-media-links li,
@@ -237,9 +264,9 @@ class ContactSection extends HTMLElement {
             <div class="support-container">
             <h2>Support</h2>
                 <ul class="support-links">
-                    <li><a href="https://www.example.com/support/faq">FAQ</a></li>
-                    <li><a href="https://www.example.com/support/contact">Contact Us</a></li>
-                    <li><a href="https://www.example.com/support/help">Help Center</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Help Center</a></li>
                 </ul>
             </div>
 
@@ -247,9 +274,9 @@ class ContactSection extends HTMLElement {
                 <h2>About Us</h2>
                 <p>We are a company that specializes in providing high-quality products and services to our customers.</p>
                 <ul class="about-links">
-                    <li><a href="https://www.example.com/about/mission">Our Mission</a></li>
-                    <li><a href="https://www.example.com/about/team">Our Team</a></li>
-                    <li><a href="https://www.example.com/about/careers">Careers</a></li>
+                    <li><a href="#">Our Mission</a></li>
+                    <li><a href="#">Our Team</a></li>
+                    <li><a href="#">Careers</a></li>
                 </ul>
             </div>
 

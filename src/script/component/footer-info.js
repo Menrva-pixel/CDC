@@ -52,6 +52,7 @@ class FooterInfo extends HTMLElement {
             font-family: 'Orbitron', sans-serif;
             font-size: 28px;
             text-align: center;
+            color: #ebe0e0;
           }
           
           .sponsors {
@@ -91,7 +92,12 @@ class FooterInfo extends HTMLElement {
             }
 
             .sponsors {
-                display: flex;
+              display: flex;
+              flex-direction: row;
+              align-items: center;
+              gap: 10px;
+              margin-left: 0px;
+              justify-content: center;
             }
             
             .sponsor-container {
@@ -117,7 +123,7 @@ class FooterInfo extends HTMLElement {
             <div class="sponsors">
                 <div class="sponsor-container">
                     <img src="https://img.icons8.com/dotty/80/null/globe.png" alt="fake-sponsor1"/>
-                    <p class="sponsor-name">SonarLint</p>
+                    <p class="sponsor-name">XonarLint</p>
                 </div>
                 <div class="sponsor-container">
                     <img src="https://img.icons8.com/ios/50/null/rocket--v1.png" alt="fake-sponsor2"/> 
@@ -125,7 +131,7 @@ class FooterInfo extends HTMLElement {
                 </div>
                 <div class="sponsor-container">
                     <img src="https://img.icons8.com/external-vitaliy-gorbachev-lineal-vitaly-gorbachev/60/null/external-coding-online-learning-vitaliy-gorbachev-lineal-vitaly-gorbachev.png" alt="fake-sponsor3"/>
-                    <p class="sponsor-name">SoliCode</p>
+                    <p class="sponsor-name">SoliCodeX</p>
                 </div>
             </div>
             <hr>

@@ -6,9 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Country Data Center</title>
   <link rel="icon" href="/src/img/favicon.ico" type="image/x-icon">
-  <script type="text/javascript" src="/src/script/unique.js"></script>
 </head>
-  
+
 <body>
   <header>
     <nav-bar></nav-bar>
@@ -22,15 +21,21 @@
   <main>
     <div class="contener">
       <div class="group2">
-        <p class="text2">Top 3 Global Ranks |<img src="https://www.worldometers.info/img/flags/us-flag.gif"> United States Of America |<img src="https://www.worldometers.info/img/flags/in-flag.gif"> India |<img src="https://www.worldometers.info/img/flags/ch-flag.gif"> China /
-          Top Military Power 1.|<img src="https://www.worldometers.info/img/flags/us-flag.gif"> 2.|<img src="https://www.worldometers.info/img/flags/ch-flag.gif"> 3.|<img src="https://www.worldometers.info/img/flags/rs-flag.gif"></p>
+        <p class="text2">Top 3 Global Ranks |<img src="https://www.worldometers.info/img/flags/us-flag.gif"> United
+          States Of America |<img src="https://www.worldometers.info/img/flags/in-flag.gif"> India |<img
+            src="https://www.worldometers.info/img/flags/ch-flag.gif"> China /
+          Top Military Power 1.|<img src="https://www.worldometers.info/img/flags/us-flag.gif"> 2.|<img
+            src="https://www.worldometers.info/img/flags/ch-flag.gif"> 3.|<img
+            src="https://www.worldometers.info/img/flags/rs-flag.gif"></p>
       </div>
     </div>
     <search-bar></search-bar>
-    <div id="result">
-    <search-result></search-result>
-    </div>
     <top-country></top-country>
+    <div id="result" class="result">
+      <h2>Search Result will be displayed here..</h2>
+      <small>type a country name, or multiple country ex: ina</small>
+      <search-result></search-result>
+    </div>
     <top-military-countries></top-military-countries>
     <div id="news">
       <news-element></news-element>
@@ -39,10 +44,17 @@
 
   <footer>
     <footer-info></footer-info>
-    <contact-section></contact-section>
-    <div class="footer">Copyright &copy; 2023 <a href="#">Barkah Herdyanto Sejati</a></div>
+    <div id="contact">
+      <contact-section></contact-section>
+    </div>
+    <div class="footer">
+      <div id="footer-info">
+        THIS WEBSITE CONTAINS BASIC COUNTRY INFORMATION, WITHOUT SHOWING CONFIDENTIAL DATA.<br>
+        © 2023 C.D.C. Inc. All rights reserved. <a href="#">Barkah Herdyanto Sejati</a>
+        </div>
+     </div>
   </footer>
-
+  <back-to-top></back-to-top>
 </body>
 
 </html>

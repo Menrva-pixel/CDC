@@ -39,10 +39,16 @@ class SearchItem extends HTMLElement {
         flex-direction: row;
         justify-content: center;
         align-items: start;
-        padding: 20px;
+        padding: 30px;
         border-radius: 5px;
         font-family: Roboto, sans-serif;
-        margin: 20px;
+        margin: 40px;
+        max-width: 1200px !important;
+        background: rgba(1, 1, 1, 0.66);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(4.9px);
+        -webkit-backdrop-filter: blur(4.9px);
+        border: 1px solid rgba(1, 1, 1, 0.68);
       }
       
       .country-symbol {
@@ -69,6 +75,7 @@ class SearchItem extends HTMLElement {
       }
       
       h2 {
+        hyphens: auto;
         font-size: 24px;
         font-weight: bold;
         margin-bottom: 10px;
@@ -84,10 +91,9 @@ class SearchItem extends HTMLElement {
       }
       
       hr {
-        border: none;
-        height: 2px;
-        background-color: #333;
-        margin-top: 0;
+        border: 0;
+        height: 1px;
+        background-image: linear-gradient(to right, rgba(0, 0, 0, 0), #c7c7c7, rgba(0, 0, 0, 0));
       }
       
       .country-sub-info {
@@ -115,10 +121,14 @@ class SearchItem extends HTMLElement {
       }
 
       @media screen and (max-width: 768px) {
-        .country-container {
-        flex-direction: column;
-        padding: 10px;
-        margin: 10px;
+
+            .country-container {
+            flex-direction: column;
+            align-items: center;
+            margin: 20px;
+            padding: 20px;
+            border-radius: 0;
+            max-width: auto !important;
         }
         
         .country-flag {
@@ -160,7 +170,6 @@ class SearchItem extends HTMLElement {
         }
 
       </style>
-      <hr>
         <h3>${this._country.name.common}</h3>
         <div id="search-results">
           <div class="country-container">
