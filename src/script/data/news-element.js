@@ -1,3 +1,5 @@
+import $ from 'jquery';
+
 class NewsElement extends HTMLElement {
     constructor() {
       super();
@@ -175,80 +177,77 @@ class NewsElement extends HTMLElement {
       `;
     }
   
-    async connectedCallback() {
-
+    connectedCallback() {
       const apiKey = 'f0ff6c118ab2469a93e751dbc619ee8d';
       const latestNewsUrl = 'https://newsapi.org/v2/top-headlines?' +
         `country=us&` +
-        `pageSize=5&` +
-        `apiKey=${apiKey}`;
-
+        `pageSize=5`;
+    
       const currentNewsUrl = 'https://newsapi.org/v2/top-headlines?' +
         `category=science&` +
-        `pageSize=4&` +
-        `apiKey=${apiKey}`;
-      
-  
-        try {
-            /* ----------------------------untuk berita terbaru---------------------------------- */
-            const latestNewsResponse = await fetch(latestNewsUrl);
-            const latestNewsData = await latestNewsResponse.json();
-            const latestNewsArticles = latestNewsData.articles;
-          
-            for (const article of latestNewsArticles) {
-              const title = article.title;
-              const description = article.description;
-              const imageUrl = article.urlToImage;
-              const publishedAt = new Date(article.publishedAt).toLocaleDateString();
-          
-              const newsItem = document.createElement('div');
-              newsItem.classList.add('news-item');
-              newsItem.innerHTML = `
-                <div class="news-image"><img src="${imageUrl}" alt="${title}"></div>
-                <div class="news-content">
-                  <h3>${title}</h3>
-                  <p class="published-date">${publishedAt}</p>
-                  <p class="description">${description}</p>
-                </div>
-              `;
-          
-              this.shadowRoot.getElementById('berita-terbaru').appendChild(newsItem);
-            }
-          
-            /* ----------------------------untuk berita terkini---------------------------------- */
-            const currentNewsResponse = await fetch(currentNewsUrl);
-            const currentNewsData = await currentNewsResponse.json();
-            const currentNewsArticles = currentNewsData.articles;
-          
-            for (const article of currentNewsArticles) {
-              const title = article.title;
-              const description = article.description;
-              const imageUrl = article.urlToImage;
-              const publishedAt = new Date(article.publishedAt).toLocaleDateString();
-          
-              const newsItem = document.createElement('div');
-              newsItem.classList.add('news-item');
-              newsItem.innerHTML = `
-                <div class="news-image"><img src="${imageUrl}" alt="${title}"></div>
-                <div class="news-content">
-                  <h3>${title}</h3>
-                  <p class="published-date">${publishedAt}</p>
-                </div>
-              `;
-  
-          this.shadowRoot.getElementById('berita-terkini').appendChild(newsItem);
-        }
-      } catch (error) {
-        console.error(error);
-      }
-    }
-  }
-  
+        `pageSize=4`;
+    
+      $.when(
+        $.ajax({
+          url: latestNewsUrl,
+          headers: {
+            'Authorization': `Bearer ${apiKey}`
+          }
+        }),
+        $.ajax({
+          url: currentNewsUrl,
+          headers: {
+            'Authorization': `Bearer ${apiKey}`
+          }
+        })
+      ).done((latestNewsResponse, currentNewsResponse) => {
+          const latestNewsData = latestNewsResponse[0];
+          const latestNewsArticles = latestNewsData.articles;
+    
+          for (const article of latestNewsArticles) {
+            const title = article.title;
+            const description = article.description;
+            const imageUrl = article.urlToImage;
+            const publishedAt = new Date(article.publishedAt).toLocaleDateString();
+    
+            const newsItem = document.createElement('div');
+            newsItem.classList.add('news-item');
+            newsItem.innerHTML = `
+              <div class="news-image"><img src="${imageUrl}" alt="${title}"></div>
+              <div class="news-content">
+                <h3>${title}</h3>
+                <p class="published-date">${publishedAt}</p>
+                <p class="description">${description}</p>
+              </div>
+            `;
+    
+            this.shadowRoot.getElementById('berita-terbaru').appendChild(newsItem);
+          }
+    
+          const currentNewsData = currentNewsResponse[0];
+          const currentNewsArticles = currentNewsData.articles;
+    
+          for (const article of currentNewsArticles) {
+            const title = article.title;
+            const description = article.description;
+            const imageUrl = article.urlToImage;
+            const publishedAt = new Date(article.publishedAt).toLocaleDateString();
+    
+            const newsItem = document.createElement('div');
+            newsItem.classList.add('news-item');
+            newsItem.innerHTML = `
+              <div class="news-image"><img src="${imageUrl}" alt="${title}"></div>
+              <div class="news-content">
+                <h3>${title}</h3>
+                <p class="published-date">${publishedAt}</p>
+              </div>
+            `;
+    
+            this.shadowRoot.getElementById('berita-terkini').appendChild(newsItem);
+          }
+        }).fail((error) => {
+          console.error(error);
+        });
+    }}
+
   customElements.define('news-element', NewsElement);
-  
-  async function getNewsApiKey() {
-    const response = await fetch('news-api-key.txt');
-    const apiKey = await response.text();
-    return apiKey.trim();
-  }
-  

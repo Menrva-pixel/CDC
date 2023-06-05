@@ -245,19 +245,19 @@ class ContactSection extends HTMLElement {
                 <ul class="social-media-links">
                   <li>
                     <img src="https://img.icons8.com/dotty/80/null/facebook-new.png"/>
-                    <a href="https://www.facebook.com">Facebook</a>
+                    <a href="#">Facebook</a>
                   </li>
                   <li>
                     <img src="https://img.icons8.com/dotty/80/null/instagram-new.png"/> 
-                    <a href="https://www.facebook.com">Instagram</a>
+                    <a href="https://www.instagram.com/herdyanto26/" target="_blank">Instagram</a>
                   </li>
                   <li>
                     <img src="https://img.icons8.com/dotty/80/null/linkedin.png"/>
-                    <a href="https://www.facebook.com">LinkedIn</a>
+                    <a href="https://www.linkedin.com/in/barkah-herdyanto-sejati-636840258/" target="_blank">LinkedIn</a>
                   </li>
                   <li>
                   <img src="https://img.icons8.com/wired/64/null/github.png"/>
-                  <a href="https://www.facebook.com">GitHub</a>
+                  <a href="https://github.com/Menrva-pixel" target="_blank">GitHub</a>
                 </li>
                 </ul>              
                 </div>
@@ -272,7 +272,7 @@ class ContactSection extends HTMLElement {
 
             <div class="about-container">
                 <h2>About Us</h2>
-                <p>We are a company that specializes in providing high-quality products and services to our customers.</p>
+                <p>We are a company that specializes in providing Information and news.</p>
                 <ul class="about-links">
                     <li><a href="#">Our Mission</a></li>
                     <li><a href="#">Our Team</a></li>

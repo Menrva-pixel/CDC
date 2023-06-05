@@ -27,15 +27,5 @@ export const fetchCountries = async () => {
   }
 };
 
-export const getMilitaryPower = (country) => {
-  const militaryPower = country.population * country.area;
-  return militaryPower;
-};
-
-export const sortCountriesByMilitaryPower = (countries) => {
-  return countries.sort((a, b) => {
-    return getMilitaryPower(b) - getMilitaryPower(a);
-  });
-};
 
 export default RcApi;

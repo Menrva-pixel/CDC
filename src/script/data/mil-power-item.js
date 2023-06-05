@@ -1,4 +1,4 @@
-
+/*belum berfungsi
 class TopMilitaryCountries extends HTMLElement {
   constructor()
    {
@@ -84,4 +84,4 @@ class TopMilitaryCountries extends HTMLElement {
 
 }
 
-customElements.define('mil-power-item', TopMilitaryCountries);
+customElements.define('mil-power-item', TopMilitaryCountries); */

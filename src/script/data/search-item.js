@@ -242,6 +242,7 @@ class SearchItem extends HTMLElement {
           </div>
       </div>
     `;
+
   }
 }
 

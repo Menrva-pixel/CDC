@@ -1,3 +1,0 @@
-const apiUrl = 'https://newsapi.org/v2/top-headlines?' +
-  `country=us&` +
-  `apiKey=f0ff6c118ab2469a93e751dbc619ee8d`;

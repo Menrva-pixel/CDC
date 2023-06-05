@@ -5,6 +5,7 @@ import '../component/mil-power.js';
 import '../component/contact-section.js';
 import '../component/footer-info.js';
 import '../component/back-to-top.js';
+import '../component/menu-makanan.js';
 import '../data/news-element.js';
 
 import DataSource from '../data/rest-country-api.js';
@@ -32,6 +33,7 @@ const main = () => {
 
   searchElement.clickEvent = onButtonSearchClicked;
 };
+
 
 export default main;
 

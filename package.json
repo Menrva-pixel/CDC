@@ -5,7 +5,7 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack serve --config webpack.dev.js",
+    "start": "webpack serve --config webpack.dev.js --open",
     "build": "webpack --config webpack.prod.js"
   },
   "author": "Barkah Herdyanto Sejati",
@@ -24,8 +24,11 @@
     "webpack-merge": "^5.8.0"
   },
   "dependencies": {
+    "ajax": "^0.0.4",
     "express": "^4.18.2",
     "favicon": "^0.0.2",
+    "jquerry": "^0.0.1-security",
+    "jquery": "^3.6.4",
     "loader": "^2.1.1",
     "regenerator-runtime": "^0.13.9"
   },
